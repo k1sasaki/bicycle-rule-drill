@@ -187,7 +187,7 @@
 
         document.getElementById('mongon2').innerText = `${q.title}`;
         document.getElementById('correct-amount').innerText = `反則金：${q.amount}${q.amount === '罰則' ? '' : '円'}`;
-        document.getElementById('description').innerText = `${q.article} : ${q.description}`;
+        document.getElementById('description').innerText = `${q.article} : ${q.description} ... (#${q.number})`;		
         document.getElementById('current-score').innerText = `正解数 ${score} / ${currentIndex + 1}`;
     }
 
@@ -209,4 +209,5 @@
 </body>
 
 </html>
+
 
