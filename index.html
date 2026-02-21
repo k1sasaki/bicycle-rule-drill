@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>自転車青切符対策ドリル - 佐々木IT粗物店</title>
+    <style>
+        body { zoom: 0.8; font-family: sans-serif; text-align: center; background: #f0f0f0; margin: 0; padding: 20px; }
+        #game-container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        
+        /* 画面制御の要：これが消えていたのが動かない主因です */
+        .hidden { display: none !important; }
+
+        #description, #current-score {
+            text-align: left;
+            display: inline-block;
+            width: 90%;
+            margin-top: 10px;
+        }
+        #current-score { text-align: right; }
+
+        .illust {
+            width: 100%;
+            max-width: 400px;
+            height: 250px;
+            object-fit: contain;
+            border: 2px solid #333;
+            border-radius: 8px;
+            margin-bottom: 5px;
+        }
+
+        .btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
+        
+        /* 回答ボタンの基本スタイル */
+        .btn-grid button { padding: 15px; font-size: 18px; cursor: pointer; border-radius: 5px; border: 1px solid #ddd; background: #fff; }
+        .btn-grid button:hover { background: #e9e9e9; }
+
+	/* ナビゲーションボタンを縦積みの大きなボタンにする */
+	.nav-btn {
+	    display: block;        /* インラインからブロック要素に変更（縦に並ぶ） */
+	    width: 80%;            /* 横幅を少し広めに */
+	    margin: 15px auto;     /* 上下の間隔を広げ、左右中央に配置 */
+	    padding: 15px 24px;    /* 押しやすいように少し厚く */
+	    font-size: 20px;       /* 文字も少し大きく */
+	    font-weight: bold;
+	    border: none;
+	    border-radius: 8px;
+	    cursor: pointer;
+	    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+	    transition: transform 0.1s, filter 0.2s;
+	    background-color: #1e90ff;
+	    color: white;
+	    text-decoration: none; /* もしリンクにしても大丈夫なように */
+	}
+        .nav-btn:active { transform: translateY(2px); box-shadow: 0 2px 3px rgba(0,0,0,0.1); }
+        .nav-btn:hover { filter: brightness(1.1); }
+
+        /* ランク別カラー */
+        .btn-bronze { background-color: #CD7F32; color: white; }
+        .btn-silver { background-color: #C0C0C0; color: #333; }
+        .btn-gold { background-color: #FFD700; color: #000; border: 2px solid #DAA520; }
+
+        /* 判定テキストのスタイル */
+        .is-correct { color: black; font-size: 2rem; font-weight: bold; }
+        .is-wrong {
+            color: #ff0000;
+            font-size: 4.5rem; /* 店主こだわり：特大の残念 */
+            font-weight: 900;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+        }
+
+        .softred { color: #ff6666; }
+        .bold24 { font-size: 24px; font-weight: bold; }
+    </style>
+</head>
+<body>
+
+<div id="game-container">
+    <div id="start-screen">
+        <h1>自転車青切符対策ドリル</h1>
+        <p>115もある違反項目の、反則金額を当てよう！</p>
+	  <div>
+	        <button class="nav-btn" onclick="startQuiz(10)">おためし(10問)</button>
+	        <button class="nav-btn btn-bronze" onclick="startQuiz(20)">ブロンズ(20問)</button>
+	        <button class="nav-btn btn-silver" onclick="startQuiz(50)">シルバー(50問)</button>
+	        <button class="nav-btn btn-gold" onclick="startQuiz('all')">★ゴールド(全問)★</button>            
+	  </div>
+    </div>
+
+    <div id="quiz-screen" class="hidden">
+        <h3 id="question-info"></h3>
+        <img id="q-image" class="illust" src="" alt="挿絵">
+        <div id="mongon" class="softred bold24"></div>
+        <div>この違反の反則金は？</div>
+        <div class="btn-grid">
+            <button onclick="checkAnswer('2,000')">2,000円</button>
+            <button onclick="checkAnswer('3,000')">3,000円</button>
+            <button onclick="checkAnswer('5,000')">5,000円</button>
+            <button onclick="checkAnswer('6,000')">6,000円</button>
+            <button onclick="checkAnswer('12,000')">12,000円</button>
+            <button onclick="checkAnswer('罰則')">罰則(赤切符)</button>
+        </div>
+    </div>
+
+    <div id="result-screen" class="hidden">
+        <h1 id="judgement"></h1>
+        <p id="mongon2" class="softred bold24"></p>
+        <p id="correct-amount" class="bold24"></p>
+        <p id="description"></p>
+        <button class="nav-btn" onclick="nextQuestion()">次の問題へ</button>
+        <p id="current-score"></p>
+    </div>
+
+    <div id="final-screen" class="hidden">
+        <h2>終了！</h2>
+        <p id="score-display"></p>
+        <button class="nav-btn" onclick="location.reload()">もう一度挑戦</button>
+        <p style="margin-top:20px; font-size:0.8em;">produced by 佐々木IT粗物店</p>
+    </div>
+    
+	<hr style="margin-top: 30px; border: 0; border-top: 1px solid #eee;">
+	    <footer id="global-footer">
+	        <a href="https://sites.google.com/view/sasakipeoplewareworks/" target="_blank" class="footer-link">
+	            📦 佐々木IT粗物店へ・・・
+	        </a>
+	    </footer>    
+</div>
+
+<script>
+    let currentQuestions = [];
+    let currentIndex = 0;
+    let score = 0;
+    let volume = 0;
+    let allData = [];
+
+    // 起動時にデータを読み込む
+    async function loadData() {
+        try {
+            const response = await fetch('data.json');
+            if (!response.ok) throw new Error('データの読み込みに失敗しました');
+            allData = await response.json();
+            console.log("全" + allData.length + "項目の読み込み完了！");
+        } catch (error) {
+            console.error("エラー:", error);
+            alert("データの読み込みに失敗しました。");
+        }
+    }
+    window.onload = loadData;
+
+    function startQuiz(vol) {
+        if (vol === 'all') {
+            volume = allData.length;
+        } else {
+            volume = vol;
+        }
+        // シャッフルして抽出
+        currentQuestions = [...allData].sort(() => 0.5 - Math.random()).slice(0, volume);
+        currentIndex = 0;
+        score = 0;
+        showQuestion();
+    }
+
+    function showQuestion() {
+        const q = currentQuestions[currentIndex];
+        document.getElementById('start-screen').classList.add('hidden');
+        document.getElementById('result-screen').classList.add('hidden');
+        document.getElementById('quiz-screen').classList.remove('hidden');
+        
+        document.getElementById('question-info').innerText = `第 ${currentIndex + 1}/${volume} 問`;
+        document.getElementById('q-image').src = `img/${q.id}.jpg`;
+        document.getElementById('mongon').innerText = q.title;
+    }
+
+    function checkAnswer(answer) {
+        const q = currentQuestions[currentIndex];
+        const isCorrect = (answer === q.amount);
+        if(isCorrect) score++;
+
+        document.getElementById('quiz-screen').classList.add('hidden');
+        document.getElementById('result-screen').classList.remove('hidden');
+
+        const judgeElement = document.getElementById('judgement');
+        judgeElement.innerText = isCorrect ? "正解！" : "残念！";
+        
+        // クラスの付け替え
+        judgeElement.className = isCorrect ? "is-correct" : "is-wrong";
+
+        document.getElementById('mongon2').innerText = `${q.title}`;
+        document.getElementById('correct-amount').innerText = `反則金：${q.amount}${q.amount === '罰則' ? '' : '円'}`;
+        document.getElementById('description').innerText = `${q.article} : ${q.description}`;
+        document.getElementById('current-score').innerText = `正解数 ${score} / ${currentIndex + 1}`;
+    }
+
+    function nextQuestion() {
+        currentIndex++;
+        if(currentIndex < volume) {
+            showQuestion();
+        } else {
+            showFinalResult();
+        }
+    }
+
+    function showFinalResult() {
+        document.getElementById('result-screen').classList.add('hidden');
+        document.getElementById('final-screen').classList.remove('hidden');
+        document.getElementById('score-display').innerText = `${volume}問中 ${score}問 正解でした！`;
+    }
+</script>
+</body>
+</html>
