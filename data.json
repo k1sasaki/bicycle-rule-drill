@@ -1,0 +1,1152 @@
+[
+  {
+    "id": 1,
+    "number": "1",
+    "category": "信号無視",
+    "title": "赤信号を無視するな",
+    "article": "第4条",
+    "image": "img/1.jpg",
+    "amount": "6,000",
+    "description": "交差点での赤信号無視"
+  },
+  {
+    "id": 2,
+    "number": "2",
+    "category": "信号無視",
+    "title": "歩道者専用信号も無視するな",
+    "article": "第4条",
+    "image": "img/2.jpg",
+    "amount": "6,000",
+    "description": "交差点以外(歩行者横断等)での赤信号無視"
+  },
+  {
+    "id": 3,
+    "number": "3",
+    "category": "信号無視",
+    "title": "黄色ならまず止まれ",
+    "article": "第4条",
+    "image": "img/3.jpg",
+    "amount": "6,000",
+    "description": "黄信号での無理な進行(止まれる状態)"
+  },
+  {
+    "id": 4,
+    "number": "4",
+    "category": "信号無視",
+    "title": "お巡りさんを無視するな",
+    "article": "第4条",
+    "image": "img/4.jpg",
+    "amount": "6,000",
+    "description": "警察官による手信号無視"
+  },
+  {
+    "id": 5,
+    "number": "5",
+    "category": "信号無視",
+    "title": "信号の矢印灯を守れ",
+    "article": "第4条",
+    "image": "img/5.jpg",
+    "amount": "6,000",
+    "description": "信号機の灯火の配列(矢印等)に従わない進行"
+  },
+  {
+    "id": 6,
+    "number": "6",
+    "category": "通行禁止",
+    "title": "チャリ通行止めを守れ",
+    "article": "第8条",
+    "image": "img/6.jpg",
+    "amount": "6,000",
+    "description": "「自転車通行止め」標識の無視"
+  },
+  {
+    "id": 7,
+    "number": "7",
+    "category": "通行禁止",
+    "title": "車両通行止めを守れ",
+    "article": "第8条",
+    "image": "img/7.jpg",
+    "amount": "6,000",
+    "description": "「車両通行止め」標識の無視"
+  },
+  {
+    "id": 8,
+    "number": "8",
+    "category": "通行禁止",
+    "title": "一方通行逆走厳禁",
+    "article": "第8条",
+    "image": "img/8.jpg",
+    "amount": "6,000",
+    "description": "一方通行(自転車を除く以外)の逆走"
+  },
+  {
+    "id": 9,
+    "number": "9",
+    "category": "通行禁止",
+    "title": "歩行者専用には入らない",
+    "article": "第8条",
+    "image": "img/9.jpg",
+    "amount": "6,000",
+    "description": "歩行者専用道路の通行(許可車以外)"
+  },
+  {
+    "id": 10,
+    "number": "10",
+    "category": "通行禁止",
+    "title": "道路管理者の禁止に従え",
+    "article": "第8条",
+    "image": "img/10.jpg",
+    "amount": "6,000",
+    "description": "道路管理者が禁止した場所の通行"
+  },
+  {
+    "id": 11,
+    "number": "11",
+    "category": "逆走",
+    "title": "車道の右側、走行禁止",
+    "article": "第17条",
+    "image": "img/11.jpg",
+    "amount": "6,000",
+    "description": "車道の右側走行(いわゆる逆走)"
+  },
+  {
+    "id": 12,
+    "number": "12",
+    "category": "逆走",
+    "title": "右側の路側帯、走行禁止",
+    "article": "第17条",
+    "image": "img/12.jpg",
+    "amount": "6,000",
+    "description": "右側の路側帯を通行(白線の右側走行)"
+  },
+  {
+    "id": 13,
+    "number": "13",
+    "category": "通行区分",
+    "title": "チャリ車道、あるなら車道走行禁止",
+    "article": "第63条",
+    "image": "img/13.jpg",
+    "amount": "5,000",
+    "description": "自転車道があるのに車道を走行"
+  },
+  {
+    "id": 14,
+    "number": "14",
+    "category": "通行区分",
+    "title": "許可ない歩道、通行禁止",
+    "article": "第17条",
+    "image": "img/14.jpg",
+    "amount": "5,000",
+    "description": "歩道通行可でない歩道を走行"
+  },
+  {
+    "id": 15,
+    "number": "15",
+    "category": "通行区分",
+    "title": "電車軌道内、通行禁止",
+    "article": "第21条",
+    "image": "img/15.jpg",
+    "amount": "5,000",
+    "description": "軌道敷内(路面電車等のレール内)の通行"
+  },
+  {
+    "id": 16,
+    "number": "16",
+    "category": "通行区分",
+    "title": "ゼブラゾーンに近づくな",
+    "article": "第17条",
+    "image": "img/16.jpg",
+    "amount": "6,000",
+    "description": "通行区分(ゼブラゾーン等)の違反通行"
+  },
+  {
+    "id": 17,
+    "number": "17",
+    "category": "歩道",
+    "title": "歩道ではゆっくり",
+    "article": "第63条",
+    "image": "img/17.jpg",
+    "amount": "5,000",
+    "description": "歩道での非徐行(すぐ止まれる速度でない)"
+  },
+  {
+    "id": 18,
+    "number": "18",
+    "category": "歩道",
+    "title": "歩行者をどかすな",
+    "article": "第63条",
+    "image": "img/18.jpg",
+    "amount": "5,000",
+    "description": "歩道での歩行者妨害(ベルでどかす等)"
+  },
+  {
+    "id": 19,
+    "number": "19",
+    "category": "歩道",
+    "title": "歩道では車道寄りに",
+    "article": "第63条",
+    "image": "img/19.jpg",
+    "amount": "5,000",
+    "description": "歩道の車道寄り以外を走行"
+  },
+  {
+    "id": 20,
+    "number": "20",
+    "category": "並進",
+    "title": "二台並び、禁止",
+    "article": "第19条",
+    "image": "img/20.jpg",
+    "amount": "3,000",
+    "description": "並進可でない場所での2台並走"
+  },
+  {
+    "id": 21,
+    "number": "21",
+    "category": "並進",
+    "title": "三台並び、厳禁",
+    "article": "第19条",
+    "image": "img/21.jpg",
+    "amount": "3,000",
+    "description": "3台以上の並走"
+  },
+  {
+    "id": 22,
+    "number": "22",
+    "category": "追い越し",
+    "title": "追い抜きしない",
+    "article": "第28条",
+    "image": "img/22.jpg",
+    "amount": "5,000",
+    "description": "左側からの追い越し(追い抜き)"
+  },
+  {
+    "id": 23,
+    "number": "23",
+    "category": "追い越し",
+    "title": "交差点では追い越し禁止",
+    "article": "第30条",
+    "image": "img/23.jpg",
+    "amount": "5,000",
+    "description": "追い越し禁止場所(交差点等)での追い越し"
+  },
+  {
+    "id": 24,
+    "number": "24",
+    "category": "割り込み",
+    "title": "信号待ちに割来むな",
+    "article": "第32条",
+    "image": "img/24.jpg",
+    "amount": "5,000",
+    "description": "信号待ち車両の横をすり抜けて前へ出る"
+  },
+  {
+    "id": 25,
+    "number": "25",
+    "category": "割り込み",
+    "title": "ひょっこりはんはひょっこり犯",
+    "article": "第26条",
+    "image": "img/25.jpg",
+    "amount": "5,000",
+    "description": "急な進路変更による他車への妨害"
+  },
+  {
+    "id": 26,
+    "number": "26",
+    "category": "一時停止",
+    "title": "止まれ標識、見たら停止",
+    "article": "第43条",
+    "image": "img/26.jpg",
+    "amount": "5,000",
+    "description": "指定場所(止まれ標識)での不停止"
+  },
+  {
+    "id": 27,
+    "number": "27",
+    "category": "一時停止",
+    "title": "交差点には一時停止で",
+    "article": "第36条",
+    "image": "img/27.jpg",
+    "amount": "5,000",
+    "description": "交差点進入時の安全確認・停止不十分"
+  },
+  {
+    "id": 28,
+    "number": "28",
+    "category": "一時停止",
+    "title": "踏切では、必ず停止",
+    "article": "第33条",
+    "image": "img/28.jpg",
+    "amount": "6,000",
+    "description": "踏切前での一時不停止"
+  },
+  {
+    "id": 29,
+    "number": "29",
+    "category": "一時停止",
+    "title": "歩道を出るなら一時停止",
+    "article": "第17条",
+    "image": "img/29.jpg",
+    "amount": "5,000",
+    "description": "歩道から車道へ出る直前の一時不停止"
+  },
+  {
+    "id": 30,
+    "number": "30",
+    "category": "踏切",
+    "title": "遮断機降りれば侵入禁止",
+    "article": "第33条",
+    "image": "img/30.jpg",
+    "amount": "6,000",
+    "description": "遮断機が閉じ始めている踏切への進入"
+  },
+  {
+    "id": 31,
+    "number": "31",
+    "category": "横断歩道",
+    "title": "横断歩道は、止まって越える",
+    "article": "第38条",
+    "image": "img/31.jpg",
+    "amount": "6,000",
+    "description": "横断歩行者の通行妨害(止まらない)"
+  },
+  {
+    "id": 32,
+    "number": "32",
+    "category": "横断歩道",
+    "title": "横断歩道越えでは、追い越さない",
+    "article": "第38条",
+    "image": "img/32.jpg",
+    "amount": "6,000",
+    "description": "横断歩道手前での追い越し・追い抜き"
+  },
+  {
+    "id": 33,
+    "number": "33",
+    "category": "優先妨害",
+    "title": "交差点では優先側優先",
+    "article": "第36条",
+    "image": "img/33.jpg",
+    "amount": "5,000",
+    "description": "優先道路を通行する車両の妨害"
+  },
+  {
+    "id": 34,
+    "number": "34",
+    "category": "優先妨害",
+    "title": "交差点では左り優先",
+    "article": "第36条",
+    "image": "img/34.jpg",
+    "amount": "5,000",
+    "description": "左方優先違反(同じ幅の道で左から来る車)"
+  },
+  {
+    "id": 35,
+    "number": "35",
+    "category": "右折",
+    "title": "右折では、必ず二段階",
+    "article": "第34条",
+    "image": "img/35.jpg",
+    "amount": "5,000",
+    "description": "二段階右折に従わない右折"
+  },
+  {
+    "id": 36,
+    "number": "36",
+    "category": "右折",
+    "title": "右折では、直進車、左折車優先",
+    "article": "第37条",
+    "image": "img/36.jpg",
+    "amount": "5,000",
+    "description": "右折時の直進・左折車への妨害"
+  },
+  {
+    "id": 37,
+    "number": "37",
+    "category": "徐行",
+    "title": "見通し悪い交差点はゆっくり",
+    "article": "第42条",
+    "image": "img/37.jpg",
+    "amount": "5,000",
+    "description": "左右の見通しがきかない交差点での非徐行"
+  },
+  {
+    "id": 38,
+    "number": "38",
+    "category": "徐行",
+    "title": "曲り角にはゆっくり入る",
+    "article": "第42条",
+    "image": "img/38.jpg",
+    "amount": "5,000",
+    "description": "道路の曲がり角付近での非徐行"
+  },
+  {
+    "id": 39,
+    "number": "39",
+    "category": "徐行",
+    "title": "急下り坂でもゆっくり走る",
+    "article": "第42条",
+    "image": "img/39.jpg",
+    "amount": "5,000",
+    "description": "勾配の急な下り坂での非徐行"
+  },
+  {
+    "id": 40,
+    "number": "40",
+    "category": "緊急車",
+    "title": "緊急車両を邪魔するな",
+    "article": "第40条",
+    "image": "img/40.jpg",
+    "amount": "5,000",
+    "description": "緊急自動車の通行妨害(避けない)"
+  },
+  {
+    "id": 41,
+    "number": "41",
+    "category": "スマホ",
+    "title": "スマホは手持ち厳禁",
+    "article": "第71条",
+    "image": "img/41.jpg",
+    "amount": "12,000",
+    "description": "走行中の携帯電話保持(手に持つ)"
+  },
+  {
+    "id": 42,
+    "number": "42",
+    "category": "スマホ",
+    "title": "たった2秒でも、ながら走行",
+    "article": "第71条",
+    "image": "img/42.jpg",
+    "amount": "12,000",
+    "description": "走行中の画面注視(2秒以上の凝視)"
+  },
+  {
+    "id": 43,
+    "number": "43",
+    "category": "ブレーキ",
+    "title": "ブレーキなしは厳禁",
+    "article": "第63条",
+    "image": "img/43.jpg",
+    "amount": "6,000",
+    "description": "ブレーキがない自転車の走行"
+  },
+  {
+    "id": 44,
+    "number": "44",
+    "category": "ブレーキ",
+    "title": "ブレーキ不良は片側でも不可",
+    "article": "第63条",
+    "image": "img/44.jpg",
+    "amount": "6,000",
+    "description": "ブレーキ性能不備(前後どちらか故障等)"
+  },
+  {
+    "id": 45,
+    "number": "45",
+    "category": "ライト",
+    "title": "夜の無灯火禁止",
+    "article": "第52条",
+    "image": "img/45.jpg",
+    "amount": "3,000",
+    "description": "夜間の無灯火走行"
+  },
+  {
+    "id": 46,
+    "number": "46",
+    "category": "ライト",
+    "title": "濃霧内もトンネル内も無灯火禁止",
+    "article": "第52条",
+    "image": "img/46.jpg",
+    "amount": "3,000",
+    "description": "トンネル内・濃霧時の無灯火"
+  },
+  {
+    "id": 47,
+    "number": "47",
+    "category": "反射材",
+    "title": "必ず着けよう、リフレクタ",
+    "article": "第63条",
+    "image": "img/47.jpg",
+    "amount": "3,000",
+    "description": "反射器材(リフレクター)の未装着"
+  },
+  {
+    "id": 48,
+    "number": "48",
+    "category": "手信号",
+    "title": "右折を知らせる手信号",
+    "article": "第53条",
+    "image": "img/48.jpg",
+    "amount": "3,000",
+    "description": "右折時の合図不履行"
+  },
+  {
+    "id": 49,
+    "number": "49",
+    "category": "手信号",
+    "title": "左折を知らせる手信号",
+    "article": "第53条",
+    "image": "img/49.jpg",
+    "amount": "3,000",
+    "description": "左折時の合図不履行"
+  },
+  {
+    "id": 50,
+    "number": "50",
+    "category": "手信号",
+    "title": "手信号は3秒前に",
+    "article": "第53条",
+    "image": "img/50.jpg",
+    "amount": "3,000",
+    "description": "進路変更時の合図不履行"
+  },
+  {
+    "id": 51,
+    "number": "51",
+    "category": "手信号",
+    "title": "徐行を知らせる手信号",
+    "article": "第53条",
+    "image": "img/51.jpg",
+    "amount": "3,000",
+    "description": "徐行時の合図不履行"
+  },
+  {
+    "id": 52,
+    "number": "52",
+    "category": "手信号",
+    "title": "停止を知らせる手信号",
+    "article": "第53条",
+    "image": "img/52.jpg",
+    "amount": "3,000",
+    "description": "停止時の合図不履行"
+  },
+  {
+    "id": 53,
+    "number": "53",
+    "category": "手信号",
+    "title": "手信号はすぐしまう",
+    "article": "第53条",
+    "image": "img/53.jpg",
+    "amount": "3,000",
+    "description": "合図の継続(終わったのに出し続ける)"
+  },
+  {
+    "id": 54,
+    "number": "54",
+    "category": "手信号",
+    "title": "手信号はしっかりと",
+    "article": "第53条",
+    "image": "img/54.jpg",
+    "amount": "3,000",
+    "description": "不適切なタイミングでの合図開始"
+  },
+  {
+    "id": 55,
+    "number": "55",
+    "category": "手信号",
+    "title": "後ろを見てから手信号",
+    "article": "第53条",
+    "image": "img/55.jpg",
+    "amount": "3,000",
+    "description": "合図を出すための安全確認不十分"
+  },
+  {
+    "id": 56,
+    "number": "56",
+    "category": "手信号",
+    "title": "手信号でふらつかない",
+    "article": "第70条",
+    "image": "img/56.jpg",
+    "amount": "6,000",
+    "description": "合図を出す際のふらつき(安全運転義務)"
+  },
+  {
+    "id": 57,
+    "number": "57",
+    "category": "ベル",
+    "title": "むやみなベル禁止",
+    "article": "第54条",
+    "image": "img/57.jpg",
+    "amount": "3,000",
+    "description": "危険防止以外での警音器使用"
+  },
+  {
+    "id": 58,
+    "number": "58",
+    "category": "ベル",
+    "title": "ベル鳴らし忘れに要注意",
+    "article": "第54条",
+    "image": "img/58.jpg",
+    "amount": "3,000",
+    "description": "警笛鳴らせの標識場所での不使用"
+  },
+  {
+    "id": 59,
+    "number": "59",
+    "category": "ベル",
+    "title": "おどしベル、禁止",
+    "article": "第54条",
+    "image": "img/59.jpg",
+    "amount": "3,000",
+    "description": "むやみな連続吹鳴(相手を煽る鳴らし方)"
+  },
+  {
+    "id": 60,
+    "number": "60",
+    "category": "荷物",
+    "title": "荷物の高さは2m",
+    "article": "第57条",
+    "image": "img/60.jpg",
+    "amount": "3,000",
+    "description": "自転車の積載制限超過(高さ2m超)"
+  },
+  {
+    "id": 61,
+    "number": "61",
+    "category": "荷物",
+    "title": "荷台のはみ出し左右15センチ",
+    "article": "第57条",
+    "image": "img/61.jpg",
+    "amount": "3,000",
+    "description": "自転車の積載制限超過(幅0.3mはみ出し)"
+  },
+  {
+    "id": 62,
+    "number": "62",
+    "category": "荷物",
+    "title": "荷台の飛び出し前後30センチ",
+    "article": "第57条",
+    "image": "img/62.jpg",
+    "amount": "3,000",
+    "description": "自転車の積載制限超過(長さ0.3mはみ出し)"
+  },
+  {
+    "id": 63,
+    "number": "63",
+    "category": "荷物",
+    "title": "荷物はしっかり固定して",
+    "article": "第71条",
+    "image": "img/63.jpg",
+    "amount": "3,000",
+    "description": "荷物の脱落防止措置不十分"
+  },
+  {
+    "id": 64,
+    "number": "64",
+    "category": "乗車",
+    "title": "二人乗りは幼児まで",
+    "article": "第57条",
+    "image": "img/64.jpg",
+    "amount": "3,000",
+    "description": "二人乗り(幼児同乗器・特例以外)"
+  },
+  {
+    "id": 65,
+    "number": "65",
+    "category": "乗車",
+    "title": "片手ハンドル厳禁",
+    "article": "第70条",
+    "image": "img/65.jpg",
+    "amount": "6,000",
+    "description": "片手運転(荷物、傘、スマホ等)"
+  },
+  {
+    "id": 66,
+    "number": "66",
+    "category": "安全義務",
+    "title": "ハンドル・ブレーキ、しっかりと",
+    "article": "第70条",
+    "image": "img/66.jpg",
+    "amount": "6,000",
+    "description": "ハンドル・ブレーキ操作不確実"
+  },
+  {
+    "id": 67,
+    "number": "67",
+    "category": "安全義務",
+    "title": "あおり運転、チャリでも罰金",
+    "article": "第70条",
+    "image": "img/67.jpg",
+    "amount": "6,000",
+    "description": "他人に危害を及ぼすような速度・方法"
+  },
+  {
+    "id": 68,
+    "number": "68",
+    "category": "安全義務",
+    "title": "わき見よそ見、厳禁",
+    "article": "第70条",
+    "image": "img/68.jpg",
+    "amount": "6,000",
+    "description": "脇見運転による前方不注意"
+  },
+  {
+    "id": 69,
+    "number": "69",
+    "category": "安全義務",
+    "title": "相手をよく見て",
+    "article": "第70条",
+    "image": "img/69.jpg",
+    "amount": "6,000",
+    "description": "動静不注視(相手の動きを見ていない)"
+  },
+  {
+    "id": 70,
+    "number": "70",
+    "category": "安全義務",
+    "title": "いつでも安全確認",
+    "article": "第70条",
+    "image": "img/70.jpg",
+    "amount": "6,000",
+    "description": "安全確認不十分による事故誘発"
+  },
+  {
+    "id": 71,
+    "number": "71",
+    "category": "神奈川",
+    "title": "傘スタンドも禁止",
+    "article": "条例",
+    "image": "img/71.jpg",
+    "amount": "3,000",
+    "description": "傘差し運転(固定具使用含む)"
+  },
+  {
+    "id": 72,
+    "number": "72",
+    "category": "神奈川",
+    "title": "イヤホンしたまま運転しない",
+    "article": "条例",
+    "image": "img/72.jpg",
+    "amount": "3,000",
+    "description": "イヤホン・ヘッドホン使用運転"
+  },
+  {
+    "id": 73,
+    "number": "73",
+    "category": "神奈川",
+    "title": "前が見えないほど積むな",
+    "article": "条例",
+    "image": "img/73.jpg",
+    "amount": "3,000",
+    "description": "著しく視界を妨げる荷物の積載"
+  },
+  {
+    "id": 74,
+    "number": "74",
+    "category": "神奈川",
+    "title": "バランスよく積もう",
+    "article": "条例",
+    "image": "img/74.jpg",
+    "amount": "3,000",
+    "description": "安定を失うおそれのある方法での積載"
+  },
+  {
+    "id": 75,
+    "number": "75",
+    "category": "神奈川",
+    "title": "サンダル、下駄履き運転禁止",
+    "article": "条例",
+    "image": "img/75.jpg",
+    "amount": "3,000",
+    "description": "下駄・サンダル等での運転(操作不確実)"
+  },
+  {
+    "id": 76,
+    "number": "76",
+    "category": "公安規則",
+    "title": "スマホ操作厳禁",
+    "article": "条例",
+    "image": "img/76.jpg",
+    "amount": "3,000",
+    "description": "スマホを操作しながらの走行(非保持)"
+  },
+  {
+    "id": 77,
+    "number": "77",
+    "category": "公安規則",
+    "title": "犬の散歩運転禁止",
+    "article": "条例",
+    "image": "img/77.jpg",
+    "amount": "3,000",
+    "description": "犬の散歩をしながらの走行"
+  },
+  {
+    "id": 78,
+    "number": "78",
+    "category": "公安規則",
+    "title": "自転車同士で曳き合うな",
+    "article": "条例",
+    "image": "img/78.jpg",
+    "amount": "3,000",
+    "description": "他の自転車を牽引しての走行"
+  },
+  {
+    "id": 79,
+    "number": "79",
+    "category": "その他",
+    "title": "2本白線内は進入禁止",
+    "article": "第17条の2",
+    "image": "img/79.jpg",
+    "amount": "5,000",
+    "description": "特定路側帯(白線2本)での歩行者妨害"
+  },
+  {
+    "id": 80,
+    "number": "80",
+    "category": "その他",
+    "title": "白線内は間を空ける",
+    "article": "第17条の2",
+    "image": "img/80.jpg",
+    "amount": "5,000",
+    "description": "特定路側帯で歩行者との距離を空けない"
+  },
+  {
+    "id": 81,
+    "number": "81",
+    "category": "その他",
+    "title": "直進車を邪魔するな",
+    "article": "第37条",
+    "image": "img/81.jpg",
+    "amount": "5,000",
+    "description": "交差点での「直進車」に対する進路妨害"
+  },
+  {
+    "id": 82,
+    "number": "82",
+    "category": "その他",
+    "title": "左折車を邪魔するな",
+    "article": "第37条",
+    "image": "img/82.jpg",
+    "amount": "5,000",
+    "description": "交差点での「左折車」に対する進路妨害"
+  },
+  {
+    "id": 83,
+    "number": "83",
+    "category": "その他",
+    "title": "左折レーンから直進するな",
+    "article": "第35条",
+    "image": "img/83.jpg",
+    "amount": "5,000",
+    "description": "進行方向別通行区分違反"
+  },
+  {
+    "id": 84,
+    "number": "84",
+    "category": "その他",
+    "title": "指定方向を無視するな",
+    "article": "第8条",
+    "image": "img/84.jpg",
+    "amount": "6,000",
+    "description": "道路標識等による通行方法(指定方向)違反"
+  },
+  {
+    "id": 85,
+    "number": "85",
+    "category": "その他",
+    "title": "抜かれるときに加速するな",
+    "article": "第27条",
+    "image": "img/85.jpg",
+    "amount": "5,000",
+    "description": "追い越しをされる時の加速"
+  },
+  {
+    "id": 86,
+    "number": "86",
+    "category": "その他",
+    "title": "追越し車には道を譲れ",
+    "article": "第27条",
+    "image": "img/86.jpg",
+    "amount": "5,000",
+    "description": "追い越しをされる時に左に寄らない"
+  },
+  {
+    "id": 87,
+    "number": "87",
+    "category": "その他",
+    "title": "泥跳ねを人に当てるな",
+    "article": "第71条",
+    "image": "img/87.jpg",
+    "amount": "3,000",
+    "description": "泥よけ(泥跳ね運転)の禁止"
+  },
+  {
+    "id": 88,
+    "number": "88",
+    "category": "その他",
+    "title": "荷物の高さは2m",
+    "article": "条例",
+    "image": "img/88.jpg",
+    "amount": "3,000",
+    "description": "公安委員会が定める「積載の高さ」違反"
+  },
+  {
+    "id": 89,
+    "number": "89",
+    "category": "その他",
+    "title": "荷台のはみ出し左右15センチ",
+    "article": "条例",
+    "image": "img/89.jpg",
+    "amount": "3,000",
+    "description": "積載物の「幅」が左右15cmを超えてはみ出す"
+  },
+  {
+    "id": 90,
+    "number": "90",
+    "category": "その他",
+    "title": "荷台の飛び出し前後30センチ",
+    "article": "条例",
+    "image": "img/90.jpg",
+    "amount": "3,000",
+    "description": "積載物の「長さ」が前後30cmを超えてはみ出す"
+  },
+  {
+    "id": 91,
+    "number": "91",
+    "category": "その他",
+    "title": "前が見えないほど積むな",
+    "article": "第71条",
+    "image": "img/91.jpg",
+    "amount": "3,000",
+    "description": "荷物が運転を妨げるような積み方"
+  },
+  {
+    "id": 92,
+    "number": "92",
+    "category": "その他",
+    "title": "荷物はしっかり固定して",
+    "article": "第71条",
+    "image": "img/92.jpg",
+    "amount": "3,000",
+    "description": "転落・飛散の防止措置不十分"
+  },
+  {
+    "id": 93,
+    "number": "93",
+    "category": "その他",
+    "title": "カゴや荷台に子は乗せない",
+    "article": "第57条",
+    "image": "img/93.jpg",
+    "amount": "3,000",
+    "description": "幼児用座席以外への幼児同乗"
+  },
+  {
+    "id": 94,
+    "number": "94",
+    "category": "その他",
+    "title": "おんぶ、だっこ乗りは禁止",
+    "article": "条例",
+    "image": "img/94.jpg",
+    "amount": "3,000",
+    "description": "幼児を背負った状態での運転(抱っこ等)"
+  },
+  {
+    "id": 95,
+    "number": "95",
+    "category": "その他",
+    "title": "踏切内で乗り捨てるな",
+    "article": "第33条",
+    "image": "img/95.jpg",
+    "amount": "6,000",
+    "description": "踏切内での故障放置"
+  },
+  {
+    "id": 96,
+    "number": "96",
+    "category": "その他",
+    "title": "消火栓のそばで止まるな",
+    "article": "第45条",
+    "image": "img/96.jpg",
+    "amount": "2,000",
+    "description": "消防用器具の近くへの駐停車(運転中含む)"
+  },
+  {
+    "id": 97,
+    "number": "97",
+    "category": "その他",
+    "title": "道路工事のそばで止まるな",
+    "article": "第45条",
+    "image": "img/97.jpg",
+    "amount": "2,000",
+    "description": "道路工事区域付近への駐停車(運転中含む)"
+  },
+  {
+    "id": 98,
+    "number": "98",
+    "category": "その他",
+    "title": "紛らわしい合図はするな",
+    "article": "第53条",
+    "image": "img/98.jpg",
+    "amount": "3,000",
+    "description": "合図の「制限」違反"
+  },
+  {
+    "id": 99,
+    "number": "99",
+    "category": "その他",
+    "title": "安全地帯では徐行",
+    "article": "第38条",
+    "image": "img/99.jpg",
+    "amount": "6,000",
+    "description": "安全地帯(島)がある場所での歩行者妨害"
+  },
+  {
+    "id": 100,
+    "number": "100",
+    "category": "その他",
+    "title": "バス乗降口を通過するな",
+    "article": "第71条",
+    "image": "img/100.jpg",
+    "amount": "6,000",
+    "description": "通学・通園バスの側方を通過する際の不注意"
+  },
+  {
+    "id": 101,
+    "number": "101",
+    "category": "その他",
+    "title": "ベルなしも禁止",
+    "article": "第54条",
+    "image": "img/101.jpg",
+    "amount": "3,000",
+    "description": "ベル(警音器)の未装備"
+  },
+  {
+    "id": 102,
+    "number": "102",
+    "category": "その他",
+    "title": "鳴らないベルも禁止",
+    "article": "第54条",
+    "image": "img/102.jpg",
+    "amount": "3,000",
+    "description": "ベルの音量不備"
+  },
+  {
+    "id": 103,
+    "number": "103",
+    "category": "その他",
+    "title": "必ず着けよう、リフレクタ",
+    "article": "第52条",
+    "image": "img/103.jpg",
+    "amount": "3,000",
+    "description": "尾灯の未装備(反射板がない場合)"
+  },
+  {
+    "id": 104,
+    "number": "104",
+    "category": "その他",
+    "title": "濃霧内の無灯火禁止",
+    "article": "第52条",
+    "image": "img/104.jpg",
+    "amount": "3,000",
+    "description": "濃霧・降雪時の前灯不点灯"
+  },
+  {
+    "id": 105,
+    "number": "105",
+    "category": "その他",
+    "title": "トンネル内の無灯火禁止",
+    "article": "第52条",
+    "image": "img/105.jpg",
+    "amount": "3,000",
+    "description": "トンネル内での前灯不点灯"
+  },
+  {
+    "id": 106,
+    "number": "106",
+    "category": "その他",
+    "title": "両耳イヤホン禁止",
+    "article": "条例",
+    "image": "img/106.jpg",
+    "amount": "3,000",
+    "description": "公安規則：イヤホン両耳装着"
+  },
+  {
+    "id": 107,
+    "number": "107",
+    "category": "その他",
+    "title": "傘差し運転禁止",
+    "article": "条例",
+    "image": "img/107.jpg",
+    "amount": "3,000",
+    "description": "公安規則：傘差し運転(片手)"
+  },
+  {
+    "id": 108,
+    "number": "108",
+    "category": "その他",
+    "title": "スマホ運転禁止",
+    "article": "条例",
+    "image": "img/108.jpg",
+    "amount": "3,000",
+    "description": "公安規則：スマホ操作(ブラケット装着含む)"
+  },
+  {
+    "id": 109,
+    "number": "109",
+    "category": "その他",
+    "title": "サンダル、下駄履き運転禁止",
+    "article": "条例",
+    "image": "img/109.jpg",
+    "amount": "3,000",
+    "description": "公安規則：不安定な履物での運転"
+  },
+  {
+    "id": 110,
+    "number": "110",
+    "category": "その他",
+    "title": "犬の散歩運転禁止",
+    "article": "条例",
+    "image": "img/110.jpg",
+    "amount": "3,000",
+    "description": "公安規則：犬を連れての並走運転"
+  },
+  {
+    "id": 111,
+    "number": "111",
+    "category": "その他",
+    "title": "自転車同士で曳き合うな",
+    "article": "条例",
+    "image": "img/111.jpg",
+    "amount": "3,000",
+    "description": "公安規則：他の自転車を牽引して走行"
+  },
+  {
+    "id": 112,
+    "number": "112",
+    "category": "その他",
+    "title": "騒音禁止",
+    "article": "条例",
+    "image": "img/112.jpg",
+    "amount": "3,000",
+    "description": "公安規則：著しく騒音を立てる走行"
+  },
+  {
+    "id": 113,
+    "number": "113",
+    "category": "その他",
+    "title": "疲れ切ったら乗らない",
+    "article": "第66条",
+    "image": "img/113.jpg",
+    "amount": "罰則",
+    "description": "安全運転義務：過労運転の禁止"
+  },
+  {
+    "id": 114,
+    "number": "114",
+    "category": "その他",
+    "title": "ラリったら乗らない",
+    "article": "第66条",
+    "image": "img/114.jpg",
+    "amount": "罰則",
+    "description": "安全運転義務：薬物使用等の禁止"
+  },
+  {
+    "id": 115,
+    "number": "115",
+    "category": "その他",
+    "title": "事故ったら報告",
+    "article": "第72条",
+    "image": "img/115.jpg",
+    "amount": "罰則",
+    "description": "事故時の報告義務違反"
+  }
+]
