@@ -233,7 +233,7 @@
     "id": 24,
     "number": "24",
     "category": "割り込み",
-    "title": "信号待ちに割来むな",
+    "title": "信号待ちに割り込むな",
     "article": "第32条",
     "image": "img/24.jpg",
     "amount": "5,000",
@@ -1149,4 +1149,5 @@
     "amount": "罰則",
     "description": "事故時の報告義務違反"
   }
+
 ]
