@@ -142,7 +142,7 @@
         document.getElementById('result-screen').classList.add('hidden');
         document.getElementById('quiz-screen').classList.remove('hidden');
         document.getElementById('question-info').innerText = `第 ${currentIndex + 1}/${volume} 問`;
-        document.getElementById('q-image').src = `img/${q.number}.jpg`;
+        document.getElementById('q-image').src = `${q.number}.jpg`;        
         document.getElementById('mongon').innerText = q.title;
     }
 
@@ -173,3 +173,4 @@
 </script>
 </body>
 </html>
+
