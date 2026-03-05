@@ -8,83 +8,53 @@
         body { zoom: 0.8; font-family: sans-serif; text-align: center; background: #f0f0f0; margin: 0; padding: 20px; }
         #game-container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         
-        /* 画面制御の要：これが消えていたのが動かない主因です */
         .hidden { display: none !important; }
 
-        #description, #current-score {
-            text-align: left;
-            display: inline-block;
-            width: 90%;
-            margin-top: 10px;
+        /* モーダル（PIN入力）のスタイル */
+        #pin-modal {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); display: flex; justify-content: center; align-items: center; z-index: 1000;
         }
-        #current-score { text-align: right; }
+        .modal-content { background: white; padding: 30px; border-radius: 10px; width: 80%; max-width: 400px; }
+        #pin-input { font-size: 24px; padding: 10px; width: 80%; text-align: center; margin: 20px 0; border: 2px solid #ddd; border-radius: 5px; }
+        .error-msg { color: red; font-weight: bold; margin-bottom: 10px; }
 
-        .illust {
-            width: 100%;
-            max-width: 400px;
-            height: 250px;
-            object-fit: contain;
-            border: 2px solid #333;
-            border-radius: 8px;
-            margin-bottom: 5px;
-        }
-
+        .illust { width: 100%; max-width: 400px; height: 250px; object-fit: contain; border: 2px solid #333; border-radius: 8px; margin-bottom: 5px; }
         .btn-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 20px; }
-        
-        /* 回答ボタンの基本スタイル */
         .btn-grid button { padding: 15px; font-size: 18px; cursor: pointer; border-radius: 5px; border: 1px solid #ddd; background: #fff; }
-        .btn-grid button:hover { background: #e9e9e9; }
-
-	/* ナビゲーションボタンを縦積みの大きなボタンにする */
-	.nav-btn {
-	    display: block;        /* インラインからブロック要素に変更（縦に並ぶ） */
-	    width: 80%;            /* 横幅を少し広めに */
-	    margin: 15px auto;     /* 上下の間隔を広げ、左右中央に配置 */
-	    padding: 15px 24px;    /* 押しやすいように少し厚く */
-	    font-size: 20px;       /* 文字も少し大きく */
-	    font-weight: bold;
-	    border: none;
-	    border-radius: 8px;
-	    cursor: pointer;
-	    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-	    transition: transform 0.1s, filter 0.2s;
-	    background-color: #1e90ff;
-	    color: white;
-	    text-decoration: none; /* もしリンクにしても大丈夫なように */
-	}
-        .nav-btn:active { transform: translateY(2px); box-shadow: 0 2px 3px rgba(0,0,0,0.1); }
-        .nav-btn:hover { filter: brightness(1.1); }
-
-        /* ランク別カラー */
+        
+        .nav-btn { display: block; width: 80%; margin: 15px auto; padding: 15px 24px; font-size: 20px; font-weight: bold; border: none; border-radius: 8px; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.1); transition: transform 0.1s; background-color: #1e90ff; color: white; }
         .btn-bronze { background-color: #CD7F32; color: white; }
         .btn-silver { background-color: #C0C0C0; color: #333; }
         .btn-gold { background-color: #FFD700; color: #000; border: 2px solid #DAA520; }
 
-        /* 判定テキストのスタイル */
-        .is-correct { color: black; font-size: 2rem; font-weight: bold; }
-        .is-wrong {
-            color: #ff0000;
-            font-size: 4.5rem; /* 店主こだわり：特大の残念 */
-            font-weight: 900;
-            text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
-        }
-
         .softred { color: #ff6666; }
         .bold24 { font-size: 24px; font-weight: bold; }
+        .is-correct { color: black; font-size: 2rem; font-weight: bold; }
+        .is-wrong { color: #ff0000; font-size: 4.5rem; font-weight: 900; }
     </style>
 </head>
 <body>
 
 <div id="game-container">
+    <div id="pin-modal" class="hidden">
+        <div class="modal-content">
+            <h2>🔐 PIN入力</h2>
+            <p>ブロンズ以上のランクに挑戦するには<br>PINナンバーが必要です。</p>
+            <input type="password" id="pin-input" placeholder="PINを入力">
+            <div id="pin-error" class="error-msg hidden">PINが正しくありません</div>
+            <button class="nav-btn" onclick="verifyPin()">認証して開始</button>
+            <button class="nav-btn" style="background:#666;" onclick="closeModal()">キャンセル</button>
+        </div>
+    </div>
+
     <div id="start-screen">
         <h1>自転車青切符対策ドリル</h1>
         <p>115もある違反項目の、反則金額を当てよう！</p>
-	  <div>
-	        <button class="nav-btn" onclick="startQuiz(10)">おためし(10問)</button>
-	        <button class="nav-btn btn-bronze" onclick="startQuiz(20)">ブロンズ(20問)</button>
-	        <button class="nav-btn btn-silver" onclick="startQuiz(50)">シルバー(50問)</button>
-	        <button class="nav-btn btn-gold" onclick="startQuiz('all')">★ゴールド(全問)★</button>            
-	  </div>
+        <button class="nav-btn" onclick="tryQuiz(10)">おためし(10問) </button>
+        <button class="nav-btn btn-bronze" onclick="tryQuiz(20)">ブロンズ(20問) 🔐有料</button>
+        <button class="nav-btn btn-silver" onclick="tryQuiz(50)">シルバー(50問) 🔐有料</button>
+        <button class="nav-btn btn-gold" onclick="tryQuiz('all')">★ゴールド(全問)★ 🔐有料</button>            
     </div>
 
     <div id="quiz-screen" class="hidden">
@@ -108,66 +78,71 @@
         <p id="correct-amount" class="bold24"></p>
         <p id="description"></p>
         <button class="nav-btn" onclick="nextQuestion()">次の問題へ</button>
-        <p id="current-score"></p>
+        <p id="current-score" style="text-align:right; font-size:0.8em;"></p>
     </div>
 
     <div id="final-screen" class="hidden">
         <h2>終了！</h2>
         <p id="score-display"></p>
-        <button class="nav-btn" onclick="location.reload()">もう一度挑戦</button>
-        <p style="margin-top:20px; font-size:0.8em;">produced by 佐々木IT粗物店</p>
+        <button class="nav-btn" onclick="location.reload()">トップへ戻る</button>
     </div>
-    
-	<hr style="margin-top: 30px; border: 0; border-top: 1px solid #eee;">
-	    <footer id="global-footer">
-	        <a href="https://sites.google.com/view/sasakipeoplewareworks/" target="_blank" class="footer-link">
-	            📦 佐々木IT粗物店へ・・・
-	        </a>
-	    </footer>    
 </div>
 
 <script>
-    let currentQuestions = [];
-    let currentIndex = 0;
-    let score = 0;
-    let volume = 0;
-    let allData = [];
+    const CORRECT_PIN = "spw2026"; // 共通PIN
+    let pendingVolume = null;
 
-    // 起動時にデータを読み込む
-    async function loadData() {
-        try {
-            const response = await fetch('data.json');
-            if (!response.ok) throw new Error('データの読み込みに失敗しました');
-            allData = await response.json();
-            console.log("全" + allData.length + "項目の読み込み完了！");
-        } catch (error) {
-            console.error("エラー:", error);
-            alert("データの読み込みに失敗しました。");
+    // --- 認証ロジック ---
+    function tryQuiz(vol) {
+        if (vol === 10 || sessionStorage.getItem('spw_auth') === 'true') {
+            startQuiz(vol);
+        } else {
+            pendingVolume = vol;
+            document.getElementById('pin-modal').classList.remove('hidden');
         }
     }
-    window.onload = loadData;
+
+    function verifyPin() {
+        const input = document.getElementById('pin-input').value;
+        if (input === CORRECT_PIN) {
+            sessionStorage.setItem('spw_auth', 'true');
+            closeModal();
+            startQuiz(pendingVolume);
+        } else {
+            document.getElementById('pin-error').classList.remove('hidden');
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('pin-modal').classList.add('hidden');
+        document.getElementById('pin-error').classList.add('hidden');
+        document.getElementById('pin-input').value = "";
+    }
+
+    // --- クイズロジック（店主の既存コードを統合） ---
+    let currentQuestions = [], currentIndex = 0, score = 0, volume = 0, allData = [];
+
+    window.onload = async () => {
+        try {
+            const response = await fetch('data.json');
+            allData = await response.json();
+        } catch (e) { console.error("Data load error"); }
+    };
 
     function startQuiz(vol) {
-        if (vol === 'all') {
-            volume = allData.length;
-        } else {
-            volume = vol;
-        }
-        // シャッフルして抽出
+        volume = (vol === 'all') ? allData.length : vol;
         currentQuestions = [...allData].sort(() => 0.5 - Math.random()).slice(0, volume);
-        currentIndex = 0;
-        score = 0;
+        currentIndex = 0; score = 0;
+        document.getElementById('start-screen').classList.add('hidden');
         showQuestion();
     }
 
     function showQuestion() {
         const q = currentQuestions[currentIndex];
-        document.getElementById('start-screen').classList.add('hidden');
         document.getElementById('result-screen').classList.add('hidden');
         document.getElementById('quiz-screen').classList.remove('hidden');
-        
         document.getElementById('question-info').innerText = `第 ${currentIndex + 1}/${volume} 問`;
-        document.getElementById('q-image').src = `${q.number}.jpg`;
+        document.getElementById('q-image').src = `img/${q.number}.jpg`;
         document.getElementById('mongon').innerText = q.title;
     }
 
@@ -175,39 +150,26 @@
         const q = currentQuestions[currentIndex];
         const isCorrect = (answer === q.amount);
         if(isCorrect) score++;
-
         document.getElementById('quiz-screen').classList.add('hidden');
         document.getElementById('result-screen').classList.remove('hidden');
-
-        const judgeElement = document.getElementById('judgement');
-        judgeElement.innerText = isCorrect ? "正解！" : "残念！";
-        
-        // クラスの付け替え
-        judgeElement.className = isCorrect ? "is-correct" : "is-wrong";
-
-        document.getElementById('mongon2').innerText = `${q.title}`;
+        const j = document.getElementById('judgement');
+        j.innerText = isCorrect ? "正解！" : "残念！";
+        j.className = isCorrect ? "is-correct" : "is-wrong";
+        document.getElementById('mongon2').innerText = q.title;
         document.getElementById('correct-amount').innerText = `反則金：${q.amount}${q.amount === '罰則' ? '' : '円'}`;
-        document.getElementById('description').innerText = `${q.article} : ${q.description} ... (#${q.number})`;		
+        document.getElementById('description').innerText = `${q.article} : ${q.description}`;
         document.getElementById('current-score').innerText = `正解数 ${score} / ${currentIndex + 1}`;
     }
 
     function nextQuestion() {
         currentIndex++;
-        if(currentIndex < volume) {
-            showQuestion();
-        } else {
-            showFinalResult();
+        if(currentIndex < volume) showQuestion();
+        else {
+            document.getElementById('result-screen').classList.add('hidden');
+            document.getElementById('final-screen').classList.remove('hidden');
+            document.getElementById('score-display').innerText = `${volume}問中 ${score}問 正解でした！`;
         }
-    }
-
-    function showFinalResult() {
-        document.getElementById('result-screen').classList.add('hidden');
-        document.getElementById('final-screen').classList.remove('hidden');
-        document.getElementById('score-display').innerText = `${volume}問中 ${score}問 正解でした！`;
     }
 </script>
 </body>
-
 </html>
-
-
